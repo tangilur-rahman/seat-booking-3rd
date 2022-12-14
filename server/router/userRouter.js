@@ -1,6 +1,7 @@
 // external modules
 const user = require("express").Router();
 const fast2sms = require("fast-two-sms");
+const generator = require("generate-password");
 
 // internal modules
 const userModel = require("./../model/userModel");
@@ -49,6 +50,15 @@ user.post("/submit", async (req, res) => {
 		// 	await documents.save();
 		// }
 
+		// for creating user-name
+		const username = getSName.replace(/\s+/g, "").toLowerCase();
+
+		// for generate password
+		const password = generator.generate({
+			length: 6,
+			numbers: true
+		});
+
 		await userModel.updateOne(
 			{ _id: getId },
 			{
@@ -59,7 +69,9 @@ user.post("/submit", async (req, res) => {
 					guardian_number: getGNum,
 					days_left: newDate,
 					frow_where,
-					date: new Date().toISOString().slice(0, 10)
+					date: new Date().toISOString().slice(0, 10),
+					username,
+					password
 				}
 			}
 		);
@@ -106,6 +118,15 @@ user.post("/submit/with-img", upload.single("image"), async (req, res) => {
 			getDay
 		} = req.body;
 
+		// for creating user-name
+		const username = getSName.replace(/\s+/g, "").toLowerCase();
+
+		// for generate password
+		const password = generator.generate({
+			length: 6,
+			numbers: true
+		});
+
 		await userModel.updateOne(
 			{ _id: getId },
 			{
@@ -117,7 +138,9 @@ user.post("/submit/with-img", upload.single("image"), async (req, res) => {
 					days_left: newDate,
 					frow_where,
 					profile_img: req.file.filename,
-					date: new Date().toISOString().slice(0, 10)
+					date: new Date().toISOString().slice(0, 10),
+					username,
+					password
 				}
 			}
 		);

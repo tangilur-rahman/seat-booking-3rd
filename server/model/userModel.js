@@ -42,6 +42,16 @@ const schema = mongoose.Schema(
 		date: {
 			type: String,
 			trim: true
+		},
+
+		username: {
+			type: String,
+			trim: true
+		},
+
+		password: {
+			type: String,
+			trim: true
 		}
 	},
 	{ timestamps: true }
