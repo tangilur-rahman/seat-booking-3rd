@@ -1,0 +1,49 @@
+.not-found-page {
+	width: 100vw;
+	height: 100vh;
+	background-color: white;
+}
+
+.not-found-page #not-found-wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 15vh;
+}
+
+.not-found-page #not-found-wrapper img {
+	object-fit: contain;
+	object-position: center;
+}
+
+.not-found-page #not-found-wrapper h4 {
+	font-weight: 700;
+	font-size: 30px;
+	letter-spacing: 0.5px;
+	word-spacing: 3px;
+}
+
+.not-found-page #error-navlink {
+	text-decoration: none;
+	color: #1a479e;
+}
+
+/* for hover link  */
+.not-found-page #error-navlink span.hover-link::after {
+	background: #007f5f;
+	height: 5px;
+}
+
+/* media query start  */
+@media screen and (max-width: 600px) {
+	.not-found-page #not-found-wrapper img {
+		width: 100%;
+		object-fit: fill;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	.not-found-page #not-found-wrapper h4:last-child {
+		font-size: 25px;
+	}
+}

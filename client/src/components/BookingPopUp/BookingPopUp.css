@@ -1,0 +1,296 @@
+.booking-popup-container {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	position: absolute;
+	top: 10vh;
+}
+
+.booking-popup-container .booking-popup-wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: white;
+	box-shadow: var(--box-shadow);
+	padding: 20px 10px 10px !important;
+	border: 4px solid transparent;
+	border-radius: 20px;
+	background: linear-gradient(to right, white, white),
+		linear-gradient(to right, red, blue);
+	background-clip: padding-box, border-box;
+	background-origin: padding-box, border-box;
+	height: fit-content;
+	position: relative;
+}
+
+/* close-btn style start  */
+.booking-popup-container .booking-popup-wrapper .close-btn {
+	position: absolute;
+	top: 10px;
+	right: 20px;
+	cursor: pointer;
+}
+
+.booking-popup-container .booking-popup-wrapper .close-btn {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	cursor: pointer;
+	display: flex;
+	width: fit-content;
+	background-color: #d7e2ea;
+	width: 35px;
+	height: 35px;
+	border-radius: 50%;
+	justify-content: center;
+	align-items: center;
+	transition: all 0.3s;
+}
+
+.booking-popup-container .booking-popup-wrapper .close-btn:hover {
+	transform: scale(0.9);
+}
+
+.booking-popup-container .booking-popup-wrapper .close-btn:active {
+	transform: scale(1.1);
+}
+
+.booking-popup-container .booking-popup-wrapper .close-btn i {
+	font-size: 20px;
+	transition: all 0.3s;
+	color: #d90429;
+}
+
+.booking-popup-container .booking-popup-wrapper .close-btn i:hover {
+	transform: rotate(180deg);
+}
+/* close-btn style end  */
+
+/* edit icon style start  */
+.booking-popup-container .booking-popup-wrapper .for-edit {
+	position: absolute;
+	top: 10px;
+	right: 70px;
+	cursor: pointer;
+	transition: all 0.3s;
+	cursor: pointer;
+	display: flex;
+	width: fit-content;
+	background-color: #d7e2ea;
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+	justify-content: center;
+	align-items: center;
+	transition: all 0.3s;
+}
+
+.booking-popup-container .booking-popup-wrapper .for-edit:hover {
+	transform: scale(0.9);
+}
+
+.booking-popup-container .booking-popup-wrapper .for-edit:active {
+	transform: scale(1.1);
+}
+
+.booking-popup-container .booking-popup-wrapper .for-edit i {
+	font-size: 20px;
+	color: #5e548e;
+}
+
+/* edit icon style end */
+
+.booking-popup-wrapper .input-fields-wrapper {
+	display: flex;
+	width: 100%;
+	justify-content: center;
+}
+
+.booking-popup-wrapper .input-fields-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 95%;
+	margin-bottom: 10px;
+}
+
+.booking-popup-wrapper .input-fields-container#when-img {
+	align-items: flex-start;
+	width: 50%;
+}
+
+/* displaying-img style start  */
+.input-fields-wrapper #displaying-img {
+	width: 50%;
+	display: flex;
+	margin-top: 10px;
+	padding-right: 20px;
+}
+
+.input-fields-wrapper #displaying-img img {
+	width: 100%;
+	height: fit-content;
+	object-fit: contain;
+	outline: 2.5px solid black;
+	border-radius: 10px;
+}
+/* displaying-img style end */
+
+.booking-popup-wrapper .input-fields-container .input-field {
+	width: 95%;
+}
+
+.booking-popup-container .input-field .displaying {
+	display: flex;
+	padding: 10px 20px;
+	margin: 7px 0;
+	align-items: center;
+}
+
+.booking-popup-container .input-field .displaying#have-img {
+	width: 60%;
+}
+
+.booking-popup-container .input-field .displaying h6 {
+	margin: 0;
+}
+
+.booking-popup-container .input-field .displaying p {
+	margin: 0 0 0 10px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	flex-grow: 1;
+}
+
+.input-fields-container .input-field input {
+	width: 100%;
+	border: 1px solid black;
+	outline: none;
+	padding: 10px 20px;
+	border-radius: 10px;
+	margin: 7px 0;
+	color: #6d6875;
+	font-weight: 600;
+}
+
+.input-fields-container .exam-fields {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 95%;
+}
+
+.input-fields-container .exam-fields .input-field {
+	width: 48%;
+}
+
+/* upload-image section style start  */
+.input-fields-container .upload {
+	width: 100%;
+	height: 40px;
+	margin: 7px 0 20px;
+	border-radius: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	box-sizing: content-box;
+}
+
+.input-fields-container .upload#preview {
+	border: 1px solid black;
+	height: 50px;
+	justify-content: flex-start;
+	width: 95%;
+}
+
+.input-fields-container .upload #upload-btn {
+	display: flex;
+	justify-content: space-between;
+	width: 95%;
+	height: 100%;
+}
+
+.input-fields-container label {
+	width: 47%;
+	display: flex;
+	justify-content: center;
+}
+
+.input-fields-container .upload p {
+	margin: 0;
+	color: #2a9d8f;
+	border: 2px dashed #2a9d8f;
+	border-radius: 10px;
+}
+
+.input-fields-container .upload label p:last-child {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	cursor: pointer;
+}
+
+.input-fields-container .upload p:first-child {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 47%;
+}
+
+.input-fields-container .upload #display-preview {
+	display: flex;
+	align-items: center;
+	padding-left: 15px;
+}
+
+.input-fields-container .upload #display-preview img {
+	width: 40px;
+	height: 40px;
+	outline: 2px solid black;
+	object-fit: cover;
+	object-position: top center;
+	border-radius: 50%;
+}
+
+.input-fields-container .upload #display-preview h5 {
+	margin: 0;
+	font-size: 17px;
+	padding-left: 20px;
+}
+/* upload-image section style end */
+
+.input-fields-container .btn-container {
+	display: flex;
+	justify-content: flex-end;
+	width: 100%;
+}
+
+.input-fields-container .btn-container button {
+	width: 115px;
+	height: 40px;
+	border-radius: 30px;
+	font-weight: 500;
+	font-size: 18px;
+	transition: all 0.3s;
+	margin-right: 12px;
+}
+
+.input-fields-container .btn-container button:first-child {
+	margin-right: 20px;
+}
+
+.input-fields-container .btn-container button:hover {
+	transform: scale(0.97);
+}
+
+.input-fields-container .btn-container button:active {
+	transform: scale(1.05);
+}
+
+.input-fields-container .btn-container button i {
+	font-size: 21px;
+}

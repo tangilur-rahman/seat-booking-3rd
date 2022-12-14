@@ -1,0 +1,47 @@
+.web-cam-container {
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+	top: -10vh;
+	display: flex;
+	justify-content: center;
+}
+
+.web-cam-container .web-cam-wrapper {
+	width: 650px;
+	height: fit-content;
+	display: flex;
+	flex-direction: column;
+	background-color: white;
+	box-shadow: var(--box-shadow);
+	border-radius: 10px;
+	padding: 20px 20px 10px 20px;
+}
+
+.web-cam-container .web-cam-wrapper #btn-container {
+	display: flex;
+	justify-content: flex-end;
+	margin: 20px 0 10px 0;
+	width: 600px;
+}
+
+.web-cam-wrapper #btn-container button {
+	width: 125px;
+	height: 40px;
+	font-size: 18px;
+	font-weight: 500;
+	border-radius: 48px;
+	transition: all 0.3s;
+}
+
+.web-cam-wrapper #btn-container button:hover {
+	transform: scale(0.97);
+}
+
+.web-cam-wrapper #btn-container button:active {
+	transform: scale(1.05);
+}
+
+.web-cam-wrapper #btn-container button:first-child {
+	margin-right: 25px;
+}
