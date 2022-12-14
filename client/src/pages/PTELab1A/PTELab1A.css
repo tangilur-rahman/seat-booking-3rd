@@ -1,11 +1,11 @@
-.girls-lab-main-container {
+.pte-1-a-main-container {
 	position: absolute;
 	top: 5vh;
 	display: flex;
 	justify-content: center;
 }
 
-.girls-lab-container {
+.pte-1-a-container {
 	width: 80vw;
 	height: 91vh;
 	display: flex;
@@ -15,7 +15,7 @@
 }
 
 /* close-btn style start  */
-.girls-lab-container .close-btn-girls-1 {
+.pte-1-a-container .close-btn-girls-1 {
 	position: absolute;
 	top: 0px;
 	right: 0px;
@@ -31,27 +31,27 @@
 	transition: all 0.3s;
 }
 
-.girls-lab-container .close-btn-girls-1:hover {
+.pte-1-a-container .close-btn-girls-1:hover {
 	transform: scale(0.9);
 }
 
-.girls-lab-container .close-btn-girls-1:active {
+.pte-1-a-container .close-btn-girls-1:active {
 	transform: scale(1.1);
 }
 
-.girls-lab-container .close-btn-girls-1 i {
+.pte-1-a-container .close-btn-girls-1 i {
 	font-size: 18px;
 	transition: all 0.3s;
 	color: #d90429;
 }
 
-.girls-lab-container .close-btn-girls-1 i:hover {
+.pte-1-a-container .close-btn-girls-1 i:hover {
 	transform: rotate(180deg);
 }
 /* close-btn style end  */
 
 /* entry gate container style start  */
-.girls-lab-container .entry-gate-container {
+.pte-1-a-container .entry-gate-container {
 	position: absolute;
 	width: fit-content;
 	left: 0;
@@ -60,18 +60,18 @@
 	align-items: center;
 }
 
-.girls-lab-container .entry-gate-container i {
+.pte-1-a-container .entry-gate-container i {
 	font-size: 20px;
 }
 
-.girls-lab-container .entry-gate-container p {
+.pte-1-a-container .entry-gate-container p {
 	margin: 0;
 	padding-left: 10px;
 	font-weight: 500;
 }
 /* entry gate container style end */
 
-.girls-lab-container .girls-lab-wrapper span {
+.pte-1-a-container .pte-1-a-wrapper span {
 	display: inline-block;
 	width: 35px;
 	height: 35px;
@@ -84,37 +84,37 @@
 	cursor: pointer;
 }
 
-.girls-lab-container .girls-lab-wrapper span.active {
+.pte-1-a-container .pte-1-a-wrapper span.active {
 	background-color: #d90429;
 	color: white;
 	font-weight: 600;
 }
 
-.girls-lab-container .girls-lab-wrapper span:hover {
+.pte-1-a-container .pte-1-a-wrapper span:hover {
 	background-color: #1b479e;
 	color: white;
 }
 
-.girls-lab-container .girls-lab-wrapper span.visibility-none {
+.pte-1-a-container .pte-1-a-wrapper span.visibility-none {
 	visibility: hidden;
 }
 
 /* layout-style start  */
-.girls-lab-container .girls-lab-wrapper {
+.pte-1-a-container .pte-1-a-wrapper {
 	display: flex;
 	justify-content: space-between;
 	flex-direction: column;
 }
 
 /* layout style start  */
-.girls-lab-wrapper .layout {
+.pte-1-a-wrapper .layout {
 	display: flex;
 	flex-grow: 1;
 	width: 100%;
 	padding: 10px 0 0px 10px;
 }
 
-.girls-lab-wrapper #when-layout-1 {
+.pte-1-a-wrapper #when-layout-1 {
 	border-top: 3px solid #a5a5a5;
 	border-right: 3px solid #a5a5a5;
 	border-left: 3px solid #a5a5a5;
@@ -122,34 +122,34 @@
 	border-top-right-radius: 10px;
 }
 
-.girls-lab-wrapper #when-layout-2 {
+.pte-1-a-wrapper #when-layout-2 {
 	border-right: 3px solid #a5a5a5;
 }
 
-.girls-lab-wrapper #when-layout-3 {
+.pte-1-a-wrapper #when-layout-3 {
 	border-right: 3px solid #a5a5a5;
 	border-left: 3px solid #a5a5a5;
 }
 
-.girls-lab-wrapper #when-layout-4 {
+.pte-1-a-wrapper #when-layout-4 {
 	border-right: 3px solid #a5a5a5;
 	border-left: 3px solid #a5a5a5;
 	border-bottom: 3px solid #a5a5a5;
 }
 
-.girls-lab-wrapper .layout .row-container .for-middle-border {
+.pte-1-a-wrapper .layout .row-container .for-middle-border {
 	border-bottom: 3px solid #a5a5a5;
 	padding-bottom: 10px;
 }
 
-.girls-lab-wrapper .layout #column {
+.pte-1-a-wrapper .layout #column {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
 	width: fit-content;
 }
 
-.girls-lab-wrapper .layout .row-container {
+.pte-1-a-wrapper .layout .row-container {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -157,17 +157,17 @@
 	padding: 0 40px;
 }
 
-.girls-lab-wrapper .layout .row-container #row-1 {
+.pte-1-a-wrapper .layout .row-container #row-1 {
 	display: flex;
 	justify-content: space-between;
 }
 
-.girls-lab-wrapper .layout .row-container #row-2 {
+.pte-1-a-wrapper .layout .row-container #row-2 {
 	display: flex;
 	justify-content: space-between;
 }
 
-.girls-lab-wrapper .layout #row-container #row-1 {
+.pte-1-a-wrapper .layout #row-container #row-1 {
 	display: flex;
 	justify-content: space-between;
 }

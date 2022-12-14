@@ -6,7 +6,7 @@ import GenerateReport from "../../components/GenerateReport/GenerateReport";
 // internal components
 import { GetContextApi } from "../../ContextApi";
 import BoysLab from "../BoysLab/BoysLab";
-import GirlsLab from "../GirlsLab/GirlsLab";
+import PTELab1A from "../PTELab1A/PTELab1A";
 import "./Home.css";
 
 const Home = () => {
@@ -19,8 +19,8 @@ const Home = () => {
 	// for lab selection
 	const [selectedLab, setSelectedLab] = useState("");
 
-	// girls-lab booking counter state
-	const [girlsLabB, setGirlsLabB] = useState([]);
+	//pte-lab-1-a booking counter state
+	const [pteLab1AB, setPteLab1AB] = useState([]);
 
 	// boys-lab booking counter state
 	const [boysLabB, setBoysLabB] = useState([]);
@@ -101,22 +101,22 @@ const Home = () => {
 						</div>
 
 						<div className="section-container">
-							{/* girls lab start  */}
+							{/* PTE Lab 1 A  */}
 							<div
 								className="section"
-								onClick={() => setSelectedLab("girls-lab")}
+								onClick={() => setSelectedLab("pte-lab-1-a")}
 							>
 								<div id="header">
-									<h5>Girls Lab</h5>
+									<h5>PTE Lab 1 A</h5>
 									<div id="counter">
 										<span>
-											Total Seat : <b>64</b>{" "}
+											Total Seat : <b>70</b>{" "}
 										</span>
 										<span>
-											Booked Seat : <b>{girlsLabB.length}</b>{" "}
+											Booked Seat : <b>{pteLab1AB.length}</b>{" "}
 										</span>
 										<span>
-											Empty Seat : <b>{64 - girlsLabB.length}</b>{" "}
+											Empty Seat : <b>{70 - pteLab1AB.length}</b>{" "}
 										</span>
 									</div>
 								</div>
@@ -129,7 +129,7 @@ const Home = () => {
 									<span className="hover-link">View Seats</span>
 								</h6>
 							</div>
-							{/* girls lab end  */}
+							{/* PTE Lab 1 A  */}
 
 							{/* boys lab start  */}
 							<div
@@ -163,9 +163,9 @@ const Home = () => {
 						</div>
 					</div>
 
-					{selectedLab === "girls-lab" && (
-						<GirlsLab
-							setGirlsLabB={setGirlsLabB}
+					{selectedLab === "pte-lab-1-a" && (
+						<PTELab1A
+							setPteLab1AB={setPteLab1AB}
 							setSelectedLab={setSelectedLab}
 						/>
 					)}

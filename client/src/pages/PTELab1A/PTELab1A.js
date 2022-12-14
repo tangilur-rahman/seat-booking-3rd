@@ -4,9 +4,9 @@ import { toast } from "react-toastify";
 import BookingPopUp from "../../components/BookingPopUp/BookingPopUp";
 
 // internal components
-import "./GirlsLab.css";
+import "./PTELab1A.css";
 
-const GirlsLab = ({ setGirlsLabB, setSelectedLab }) => {
+const PTELab1A = ({ setPteLab1AB, setSelectedLab }) => {
 	// for updating booking
 	const [isUpdate, setIsUpdate] = useState("");
 
@@ -23,7 +23,7 @@ const GirlsLab = ({ setGirlsLabB, setSelectedLab }) => {
 	useEffect(() => {
 		(async () => {
 			try {
-				const response = await fetch("/user/allDocs?lab=girls-lab");
+				const response = await fetch("/user/allDocs?lab=pte-lab-1-a");
 
 				const result = await response.json();
 
@@ -51,7 +51,7 @@ const GirlsLab = ({ setGirlsLabB, setSelectedLab }) => {
 	// for counting booking seat & empty seat start
 	useEffect(() => {
 		if (getDocs) {
-			setGirlsLabB(
+			setPteLab1AB(
 				getDocs
 					.map(
 						(value) =>
@@ -72,12 +72,12 @@ const GirlsLab = ({ setGirlsLabB, setSelectedLab }) => {
 		<>
 			{getDocs.length > 0 && (
 				<div
-					className="container-fluid p-0 girls-lab-main-container"
+					className="container-fluid p-0 pte-1-a-main-container"
 					data-aos="zoom-in"
 					data-aos-duration="700"
 				>
-					<div className="row m-0 girls-lab-container">
-						<div className="col-12 p-0 girls-lab-wrapper">
+					<div className="row m-0 pte-1-a-container">
+						<div className="col-12 p-0 pte-1-a-wrapper">
 							{/* layout-1 start  */}
 							<div className="layout" id="when-layout-1">
 								{/* column-start  */}
@@ -700,4 +700,4 @@ const GirlsLab = ({ setGirlsLabB, setSelectedLab }) => {
 	);
 };
 
-export default GirlsLab;
+export default PTELab1A;
