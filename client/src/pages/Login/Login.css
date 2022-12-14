@@ -1,0 +1,135 @@
+.login-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100vw;
+	height: 100vh;
+	background: linear-gradient(rgba(0, 0, 0, 0.1) 100%, rgba(0, 0, 0, 0.1) 100%),
+		url("./login-bg.jpg");
+	background-size: 100% 100%;
+	background-position: center;
+	background-repeat: repeat;
+	position: relative;
+}
+
+.login-container .form-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	box-shadow: var(--box-shadow);
+	border-radius: var(--card-border-radius);
+
+	/* From https://css.glass */
+	background: rgba(255, 255, 255, 0.2);
+	border-radius: 16px;
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(5px);
+	-webkit-backdrop-filter: blur(5px);
+	border: 1px solid rgba(255, 255, 255, 0.3);
+
+	height: 57vh;
+	width: fit-content;
+}
+
+.login-container .form-container img {
+	width: 100px;
+	height: auto;
+	box-sizing: content-box;
+	align-self: center;
+	margin: 25px 0;
+}
+
+.login-container .form-container form {
+	padding: 0px 40px 20px;
+}
+
+.login-container .form-container form .form-control {
+	border: 2px solid #4a4e69;
+}
+
+.login-container .form-container form .form-control:focus {
+	outline: 2px solid #1d3557;
+	border: none;
+}
+
+.login-container .form-container form input {
+	font-weight: 500;
+	background-color: transparent !important;
+	border-width: 3px;
+	border-radius: 10px;
+	width: 400px;
+}
+
+.login-container .form-container form input::placeholder {
+	font-weight: 500;
+}
+
+.login-container .form-container form input:focus {
+	font-weight: 500;
+	background-color: transparent;
+}
+
+.form-container form button {
+	padding: 7px 20px;
+	font-size: 17px;
+	font-weight: 500;
+}
+
+.form-container form button:hover {
+	transform: scale(0.97);
+}
+
+.form-container form button:active {
+	transform: scale(1.02);
+}
+
+/* password eye style start  */
+
+.form-container #password-field {
+	position: relative;
+}
+
+.form-container #password-field #eye {
+	position: absolute;
+	top: 30%;
+	right: 20px;
+}
+
+.form-container #password-field #eye i {
+	opacity: 0.7;
+}
+/* password eye style end  */
+
+/* media query start  */
+@media screen and (max-width: 650px) {
+	.login-container .form-container-wrapper {
+		margin-top: -60px;
+	}
+
+	.login-container .form-container {
+		height: 350px;
+	}
+}
+
+@media screen and (max-width: 550px) {
+	.login-container .form-container-wrapper {
+		margin-top: -70px;
+	}
+
+	.login-container .form-container form {
+		padding: 10px 20px 20px;
+	}
+
+	.login-container .form-container img {
+		width: 300px;
+		height: 70px;
+	}
+}
+
+@media screen and (max-width: 410px) {
+	.login-container .form-container img {
+		width: 260px;
+		height: 70px;
+	}
+}
+/* media query end  */
