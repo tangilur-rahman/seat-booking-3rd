@@ -2,6 +2,7 @@
 const user = require("express").Router();
 const fast2sms = require("fast-two-sms");
 const generator = require("generate-password");
+const jwt = require("jsonwebtoken");
 
 // internal modules
 const userModel = require("./../model/userModel");
@@ -182,6 +183,59 @@ user.get("/generate-report", async (req, res) => {
 			res.status(200).json(documents);
 		}
 	} catch (error) {
+		res.status(500).json({ error: "Maintaining mode, Try again latter!" });
+	}
+});
+
+// for login user
+user.post("/login", async (req, res) => {
+	try {
+		let { username, password } = req.body;
+
+		username = username.replace(/\s+/g, "").toLowerCase();
+
+		const documents = await userModel.find({ username });
+
+		if (documents.length > 0) {
+			const newDocuments = documents.filter(
+				(value) =>
+					new Date().getTime() < value?.days_left &&
+					Math.abs(
+						Math.floor(value?.days_left / (3600 * 24 * 1000)) -
+							Math.floor(new Date().getTime() / (3600 * 24 * 1000))
+					) !== 0
+			);
+
+			if (newDocuments.length > 0) {
+				const realUser = newDocuments.filter(
+					(value) => value.password === password
+				);
+
+				if (realUser.length > 0) {
+					// create token start
+					const token = await jwt.sign(
+						{ _id: realUser[0]._id },
+						process.env.SECRET_KEY,
+						{ expiresIn: "365d" }
+					);
+
+					res.cookie(process.env.COOKIES_NAME, token, {
+						expires: new Date(Date.now() + 31556952000)
+					});
+
+					res.status(200).json({ message: "Login successfully." });
+				} else {
+					res.status(400).json({ error: "Invalid password." });
+				}
+			} else {
+				res.status(400).json({ error: "Booking Expired." });
+			}
+		} else {
+			res.status(400).json({ error: "Authentication Failed!" });
+		}
+	} catch (error) {
+		console.log(error.message);
+
 		res.status(500).json({ error: "Maintaining mode, Try again latter!" });
 	}
 });

@@ -1,6 +1,7 @@
 // external modules
 const express = require("express");
 const path = require("path");
+const cookie = require("cookie-parser");
 require("dotenv").config();
 
 // internal modules
@@ -14,6 +15,7 @@ require("./Config/ConnectMongoDB");
 
 // application-level middleware
 app.use(express.json());
+app.use(cookie());
 
 // routers
 app.use("/user", userRouter);

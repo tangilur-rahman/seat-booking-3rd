@@ -71,10 +71,15 @@ const Login = () => {
 						password: ""
 					});
 				} else if (response.status === 400) {
-					toast(result.error, {
+					toast.info(result.error, {
 						position: "top-right",
-						theme: "dark",
-						autoClose: 3000
+						autoClose: 3000,
+						hideProgressBar: false,
+						closeOnClick: true,
+						pauseOnHover: true,
+						draggable: true,
+						progress: undefined,
+						theme: "dark"
 					});
 				} else if (result.error) {
 					toast.error(result.error, {
