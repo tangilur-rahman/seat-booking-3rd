@@ -73,7 +73,9 @@ const BookingPopUp = ({
 
 	// selectedDay format start
 	// pick booking date
-	const [selectedDay, setSelectedDay] = useState(null);
+	const [selectedDay, setSelectedDay] = useState(
+		getBooked ? getBooked.exam_date : ""
+	);
 
 	const formatDate = () => {
 		if (selectedDay) {
