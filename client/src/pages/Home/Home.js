@@ -105,95 +105,193 @@ const Home = () => {
 						</div>
 
 						<div className="section-container">
-							{/* PTE Lab 1A start */}
-							<div
-								className="section"
-								onClick={() => setSelectedLab("pte-lab-1-a")}
-							>
-								<div id="header">
-									<h5>PTE Lab 1A</h5>
-									<div id="counter">
-										<span>
-											Total Seat : <b>70</b>{" "}
-										</span>
-										<span>
-											Booked Seat : <b>{pteLab1AB.length}</b>{" "}
-										</span>
-										<span>
-											Empty Seat : <b>{70 - pteLab1AB.length}</b>{" "}
-										</span>
+							{/* row-1 start  */}
+							<div className="row-1">
+								{/* PTE Lab 1A start */}
+								<div
+									className="section"
+									onClick={() => setSelectedLab("pte-lab-1-a")}
+								>
+									<div id="header">
+										<h5>PTE Lab 1A</h5>
+										<div id="counter">
+											<span>
+												Total Seat : <b>70</b>{" "}
+											</span>
+											<span>
+												Booked Seat : <b>{pteLab1AB.length}</b>{" "}
+											</span>
+											<span>
+												Empty Seat : <b>{70 - pteLab1AB.length}</b>{" "}
+											</span>
+										</div>
 									</div>
-								</div>
 
-								<div id="lab-container">
-									<img src="/assets/images/pte-lab-1a.png" alt="lab-img" />
-								</div>
-
-								<h6 className="view-seats">
-									<span className="hover-link">View Seats</span>
-								</h6>
-							</div>
-							{/* PTE Lab 1A end */}
-
-							{/* PTE Lab 1B Start */}
-							<div
-								className="section"
-								onClick={() => setSelectedLab("pte-lab-1-b")}
-							>
-								<div id="header">
-									<h5>PTE Lab 1B</h5>
-									<div id="counter">
-										<span>
-											Total Seat : <b>22</b>{" "}
-										</span>
-										<span>
-											Booked Seat : <b>{pteLab1BB.length}</b>{" "}
-										</span>
-										<span>
-											Empty Seat : <b>{22 - pteLab1BB.length}</b>{" "}
-										</span>
+									<div id="lab-container">
+										<img src="/assets/images/pte-lab-1a.png" alt="lab-img" />
 									</div>
+
+									<h6 className="view-seats">
+										<span className="hover-link">View Seats</span>
+									</h6>
 								</div>
+								{/* PTE Lab 1A end */}
 
-								<div id="lab-container">
-									<img src="/assets/images/pte-lab-1b.png" alt="lab-img" />
-								</div>
-
-								<h6 className="view-seats">
-									<span className="hover-link">View Seats</span>
-								</h6>
-							</div>
-							{/* PTE Lab 1B end  */}
-
-							{/* pte-lab-2 start  */}
-							<div
-								className="section"
-								onClick={() => setSelectedLab("pte-lab-2")}
-							>
-								<div id="header">
-									<h5>PTE Lab 2</h5>
-									<div id="counter">
-										<span>
-											Total Seat : <b>70</b>{" "}
-										</span>
-										<span>
-											Booked Seat : <b>{pteLab2B.length}</b>{" "}
-										</span>
-										<span>
-											Empty Seat : <b>{70 - pteLab2B.length}</b>{" "}
-										</span>
+								{/* PTE Lab 1B Start */}
+								<div
+									className="section"
+									onClick={() => setSelectedLab("pte-lab-1-b")}
+								>
+									<div id="header">
+										<h5>PTE Lab 1B</h5>
+										<div id="counter">
+											<span>
+												Total Seat : <b>22</b>{" "}
+											</span>
+											<span>
+												Booked Seat : <b>{pteLab1BB.length}</b>{" "}
+											</span>
+											<span>
+												Empty Seat : <b>{22 - pteLab1BB.length}</b>{" "}
+											</span>
+										</div>
 									</div>
-								</div>
 
-								<div id="lab-container">
-									<img src="/assets/images/pte-lab-1a.png" alt="lab-img" />
-								</div>
+									<div id="lab-container">
+										<img src="/assets/images/pte-lab-1b.png" alt="lab-img" />
+									</div>
 
-								<h6 className="view-seats">
-									<span className="hover-link">View Seats</span>
-								</h6>
+									<h6 className="view-seats">
+										<span className="hover-link">View Seats</span>
+									</h6>
+								</div>
+								{/* PTE Lab 1B end  */}
+
+								{/* pte-lab-2 start  */}
+								<div
+									className="section"
+									onClick={() => setSelectedLab("pte-lab-2")}
+								>
+									<div id="header">
+										<h5>PTE Lab 2</h5>
+										<div id="counter">
+											<span>
+												Total Seat : <b>70</b>{" "}
+											</span>
+											<span>
+												Booked Seat : <b>{pteLab2B.length}</b>{" "}
+											</span>
+											<span>
+												Empty Seat : <b>{70 - pteLab2B.length}</b>{" "}
+											</span>
+										</div>
+									</div>
+
+									<div id="lab-container">
+										<img src="/assets/images/pte-lab-1a.png" alt="lab-img" />
+									</div>
+
+									<h6 className="view-seats">
+										<span className="hover-link">View Seats</span>
+									</h6>
+								</div>
+								{/* pte-lab-2 end  */}
 							</div>
-							{/* pte-lab-2 end  */}
+							{/* row-1 end  */}
+
+							{/* row-2 start  */}
+							<div className="row-2">
+								{/* PTE Lab 1A start */}
+								<div
+									className="section"
+									onClick={() => setSelectedLab("pte-lab-1-a")}
+								>
+									<div id="header">
+										<h5>PTE Lab 1A</h5>
+										<div id="counter">
+											<span>
+												Total Seat : <b>70</b>{" "}
+											</span>
+											<span>
+												Booked Seat : <b>{pteLab1AB.length}</b>{" "}
+											</span>
+											<span>
+												Empty Seat : <b>{70 - pteLab1AB.length}</b>{" "}
+											</span>
+										</div>
+									</div>
+
+									<div id="lab-container">
+										<img src="/assets/images/pte-lab-1a.png" alt="lab-img" />
+									</div>
+
+									<h6 className="view-seats">
+										<span className="hover-link">View Seats</span>
+									</h6>
+								</div>
+								{/* PTE Lab 1A end */}
+
+								{/* PTE Lab 1B Start */}
+								<div
+									className="section"
+									onClick={() => setSelectedLab("pte-lab-1-b")}
+								>
+									<div id="header">
+										<h5>PTE Lab 1B</h5>
+										<div id="counter">
+											<span>
+												Total Seat : <b>22</b>{" "}
+											</span>
+											<span>
+												Booked Seat : <b>{pteLab1BB.length}</b>{" "}
+											</span>
+											<span>
+												Empty Seat : <b>{22 - pteLab1BB.length}</b>{" "}
+											</span>
+										</div>
+									</div>
+
+									<div id="lab-container">
+										<img src="/assets/images/pte-lab-1b.png" alt="lab-img" />
+									</div>
+
+									<h6 className="view-seats">
+										<span className="hover-link">View Seats</span>
+									</h6>
+								</div>
+								{/* PTE Lab 1B end  */}
+
+								{/* pte-lab-2 start  */}
+								<div
+									className="section"
+									onClick={() => setSelectedLab("pte-lab-2")}
+								>
+									<div id="header">
+										<h5>PTE Lab 2</h5>
+										<div id="counter">
+											<span>
+												Total Seat : <b>70</b>{" "}
+											</span>
+											<span>
+												Booked Seat : <b>{pteLab2B.length}</b>{" "}
+											</span>
+											<span>
+												Empty Seat : <b>{70 - pteLab2B.length}</b>{" "}
+											</span>
+										</div>
+									</div>
+
+									<div id="lab-container">
+										<img src="/assets/images/pte-lab-1a.png" alt="lab-img" />
+									</div>
+
+									<h6 className="view-seats">
+										<span className="hover-link">View Seats</span>
+									</h6>
+								</div>
+								{/* pte-lab-2 end  */}
+							</div>
+							{/* row-2 end  */}
 						</div>
 					</div>
 

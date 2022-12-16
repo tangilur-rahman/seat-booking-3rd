@@ -125,7 +125,24 @@
 	height: calc(100% - 75px);
 	padding: 20px 25px;
 	display: flex;
+	flex-direction: column;
 	justify-content: space-between;
+}
+
+.home-container .body-container .section-container .row-1 {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(200px, 1fr));
+	grid-gap: 15px;
+	padding: 0 30px 10px;
+	max-height: 50%;
+}
+
+.home-container .body-container .section-container .row-2 {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(200px, 1fr));
+	grid-gap: 15px;
+	padding: 10px 30px 0px;
+	max-height: 50%;
 }
 
 .body-container .section-container .section {
