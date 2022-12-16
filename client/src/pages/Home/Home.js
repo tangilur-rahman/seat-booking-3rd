@@ -126,7 +126,7 @@ const Home = () => {
 								</div>
 
 								<div id="lab-container">
-									<img src="/assets/images/girls-lab.png" alt="lab-img" />
+									<img src="/assets/images/pte-lab-1a.png" alt="lab-img" />
 								</div>
 
 								<h6 className="view-seats">
@@ -156,7 +156,7 @@ const Home = () => {
 								</div>
 
 								<div id="lab-container">
-									<img src="/assets/images/girls-lab.png" alt="lab-img" />
+									<img src="/assets/images/pte-lab-1b.png" alt="lab-img" />
 								</div>
 
 								<h6 className="view-seats">
@@ -186,7 +186,7 @@ const Home = () => {
 								</div>
 
 								<div id="lab-container">
-									<img src="/assets/images/boys-lab.png" alt="lab-img" />
+									<img src="/assets/images/pte-lab-1a.png" alt="lab-img" />
 								</div>
 
 								<h6 className="view-seats">
