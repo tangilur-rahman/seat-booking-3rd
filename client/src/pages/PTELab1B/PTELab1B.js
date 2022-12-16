@@ -72,12 +72,12 @@ const PTELab1B = ({ setPteLab1BB, setSelectedLab }) => {
 		<>
 			{getDocs.length > 0 && (
 				<div
-					className="container-fluid p-0 pte-1-a-main-container"
+					className="container-fluid p-0 pte-1-b-main-container"
 					data-aos="zoom-in"
 					data-aos-duration="700"
 				>
-					<div className="row m-0 pte-1-a-container">
-						<div className="col-12 p-0 pte-1-a-wrapper">
+					<div className="row m-0 pte-1-b-container">
+						<div className="col-12 p-0 pte-1-b-wrapper">
 							{/* layout-1 start  */}
 							<div className="layout" id="when-layout-1">
 								{getDocs
@@ -136,7 +136,7 @@ const PTELab1B = ({ setPteLab1BB, setSelectedLab }) => {
 											</span>
 										);
 									})
-									.splice(0, 19)}
+									.splice(0, 3)}
 
 								<span className="visibility-none"></span>
 							</div>
@@ -146,8 +146,6 @@ const PTELab1B = ({ setPteLab1BB, setSelectedLab }) => {
 							<div className="layout" id="when-layout-2">
 								{/* row-1 start  */}
 								<div className="row-container-1">
-									<span className="visibility-none"></span>
-									<span className="visibility-none"></span>
 									{getDocs
 										.map((value, index) => {
 											return (
@@ -206,16 +204,12 @@ const PTELab1B = ({ setPteLab1BB, setSelectedLab }) => {
 												</span>
 											);
 										})
-										.splice(19, 16)}
-									<span className="visibility-none"></span>
-									<span className="visibility-none"></span>
+										.splice(3, 2)}
 								</div>
 								{/* row-1 end */}
 
 								{/* row-2 start  */}
 								<div className="row-container-2">
-									<span className="visibility-none"></span>
-									<span className="visibility-none"></span>
 									{getDocs
 										.map((value, index) => {
 											return (
@@ -274,9 +268,7 @@ const PTELab1B = ({ setPteLab1BB, setSelectedLab }) => {
 												</span>
 											);
 										})
-										.splice(35, 16)}
-									<span className="visibility-none"></span>
-									<span className="visibility-none"></span>
+										.splice(5, 2)}
 								</div>
 								{/* row-2 end */}
 							</div>
@@ -284,12 +276,6 @@ const PTELab1B = ({ setPteLab1BB, setSelectedLab }) => {
 
 							{/* layout-3 start  */}
 							<div className="layout" id="when-layout-3">
-								<span className="visibility-none"></span>
-								<span className="visibility-none"></span>
-								<span className="visibility-none"></span>
-								<span className="visibility-none"></span>
-								<span className="visibility-none"></span>
-								<span className="visibility-none"></span>
 								{getDocs
 									.map((value, index) => {
 										return (
@@ -346,7 +332,9 @@ const PTELab1B = ({ setPteLab1BB, setSelectedLab }) => {
 											</span>
 										);
 									})
-									.splice(51, 14)}
+									.splice(7, 3)}
+
+								<span className="visibility-none"></span>
 							</div>
 							{/* layout-3 end */}
 
@@ -408,9 +396,71 @@ const PTELab1B = ({ setPteLab1BB, setSelectedLab }) => {
 											</span>
 										);
 									})
-									.splice(65, 5)}
+									.splice(10, 5)}
 							</div>
 							{/* layout-4 end */}
+
+							{/* layout-5 start  */}
+							<div className="layout" id="when-layout-5">
+								{getDocs
+									.map((value, index) => {
+										return (
+											<span
+												key={index}
+												onClick={() =>
+													new Date().getTime() < value?.days_left
+														? Math.abs(
+																Math.floor(
+																	value.days_left / (3600 * 24 * 1000)
+																) -
+																	Math.floor(
+																		new Date().getTime() / (3600 * 24 * 1000)
+																	)
+														  ) !== 0
+															? setBooked(value)
+															: setId(value._id)
+														: setId(value._id)
+												}
+												className={
+													new Date().getTime() < value?.days_left
+														? Math.abs(
+																Math.floor(
+																	value.days_left / (3600 * 24 * 1000)
+																) -
+																	Math.floor(
+																		new Date().getTime() / (3600 * 24 * 1000)
+																	)
+														  ) !== 0
+															? "active"
+															: ""
+														: ""
+												}
+											>
+												{new Date().getTime() < value.days_left
+													? Math.abs(
+															Math.floor(value.days_left / (3600 * 24 * 1000)) -
+																Math.floor(
+																	new Date().getTime() / (3600 * 24 * 1000)
+																)
+													  ) !== 0
+														? Math.abs(
+																Math.floor(
+																	value.days_left / (3600 * 24 * 1000)
+																) -
+																	Math.floor(
+																		new Date().getTime() / (3600 * 24 * 1000)
+																	)
+														  )
+														: ""
+													: ""}
+
+												{/* {value.booking_seat} */}
+											</span>
+										);
+									})
+									.splice(15, 7)}
+							</div>
+							{/* layout-5 end */}
 						</div>
 
 						{/* for close button start  */}

@@ -1,11 +1,11 @@
-.pte-1-a-main-container {
+.pte-1-b-main-container {
 	position: absolute;
 	top: 5vh;
 	display: flex;
 	justify-content: center;
 }
 
-.pte-1-a-container {
+.pte-1-b-container {
 	width: 80vw;
 	height: 91vh;
 	display: flex;
@@ -15,7 +15,7 @@
 }
 
 /* close-btn style start  */
-.pte-1-a-container .close-btn-girls-1 {
+.pte-1-b-container .close-btn-girls-1 {
 	position: absolute;
 	top: 10px;
 	right: 10px;
@@ -31,43 +31,43 @@
 	transition: all 0.3s;
 }
 
-.pte-1-a-container .close-btn-girls-1:hover {
+.pte-1-b-container .close-btn-girls-1:hover {
 	transform: scale(0.9);
 }
 
-.pte-1-a-container .close-btn-girls-1:active {
+.pte-1-b-container .close-btn-girls-1:active {
 	transform: scale(1.1);
 }
 
-.pte-1-a-container .close-btn-girls-1 i {
+.pte-1-b-container .close-btn-girls-1 i {
 	font-size: 18px;
 	transition: all 0.3s;
 	color: #d90429;
 }
 
-.pte-1-a-container .close-btn-girls-1 i:hover {
+.pte-1-b-container .close-btn-girls-1 i:hover {
 	transform: rotate(180deg);
 }
 /* close-btn style end  */
 
 /* entry gate container style start  */
-.pte-1-a-container .entry-gate-container {
+.pte-1-b-container .entry-gate-container {
 	position: absolute;
 	width: fit-content;
 	left: 0;
-	bottom: 10%;
+	top: 5%;
 	display: flex;
 	align-items: center;
 	background-color: #fff;
 	padding: 20px;
 }
 
-.pte-1-a-container .entry-gate-container i {
+.pte-1-b-container .entry-gate-container i {
 	font-size: 22px;
 	color: #5a189a;
 }
 
-.pte-1-a-container .entry-gate-container p {
+.pte-1-b-container .entry-gate-container p {
 	margin: 0;
 	padding-left: 10px;
 	font-weight: 500;
@@ -75,7 +75,7 @@
 /* entry gate container style end */
 
 /* seat style start  */
-.pte-1-a-container .pte-1-a-wrapper span {
+.pte-1-b-container .pte-1-b-wrapper span {
 	display: inline-block;
 	width: 35px;
 	height: 35px;
@@ -88,26 +88,27 @@
 	cursor: pointer;
 }
 
-.pte-1-a-container .pte-1-a-wrapper span.active {
+.pte-1-b-container .pte-1-b-wrapper span.active {
 	background-color: green;
 	color: white;
 	font-weight: 600;
 }
 
-.pte-1-a-container .pte-1-a-wrapper span:hover {
+.pte-1-b-container .pte-1-b-wrapper span:hover {
 	background-color: #1b479e;
 	color: white;
 }
 
-.pte-1-a-container .pte-1-a-wrapper span.visibility-none {
+.pte-1-b-container .pte-1-b-wrapper span.visibility-none {
 	visibility: hidden;
 }
 /* seat style start  */
 
 /* layout-style start  */
-.pte-1-a-container .pte-1-a-wrapper {
+.pte-1-b-container .pte-1-b-wrapper {
 	display: flex;
 	justify-content: space-between;
+	align-items: flex-end;
 	flex-direction: column;
 	position: relative;
 	border: 3px solid #a5a5a5;
@@ -115,61 +116,83 @@
 }
 
 /* layout style start  */
-.pte-1-a-wrapper .layout {
+.pte-1-b-wrapper .layout {
 	display: flex;
 	flex-grow: 1;
 	width: 100%;
 	padding: 10px 0 10px 10px;
 }
 
-.pte-1-a-wrapper #when-layout-1 {
+.pte-1-b-wrapper #when-layout-1 {
 	border-top-left-radius: 10px;
 	border-top-right-radius: 10px;
+	width: 40%;
 	display: flex;
 	justify-content: space-between;
 }
 
-.pte-1-a-wrapper #when-layout-2 {
+.pte-1-b-wrapper #when-layout-2 {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	align-items: center;
 }
 
-.pte-1-a-wrapper #when-layout-2 .row-container-1 {
+.pte-1-b-wrapper #when-layout-2 .row-container-1 {
 	display: flex;
 	justify-content: space-between;
 	padding-bottom: 20px;
 }
 
-.pte-1-a-wrapper #when-layout-2 .row-container-2 {
+.pte-1-b-wrapper #when-layout-2 .row-container-1 span:first-child {
+	margin-right: 40px;
+}
+
+.pte-1-b-wrapper #when-layout-2 .row-container-2 {
 	display: flex;
 	justify-content: space-between;
 	padding-top: 20px;
 	position: relative;
 }
 
-.pte-1-a-wrapper #when-layout-2 .row-container-2::before {
+.pte-1-b-wrapper #when-layout-2 .row-container-2 span:first-child {
+	margin-right: 40px;
+}
+
+.pte-1-b-wrapper #when-layout-2 .row-container-2::before {
 	content: "";
 	position: absolute;
-	width: 80%;
+	width: 120%;
 	height: 2.5px;
 	background-color: #a5a5a5;
 	top: 0;
-	left: 10%;
+	left: -10%;
 }
 
-.pte-1-a-wrapper #when-layout-3 {
+.pte-1-b-wrapper #when-layout-3 {
 	display: flex;
 	justify-content: space-between;
 	align-items: flex-end;
 	padding-right: 10px;
+	width: 40%;
 }
 
-.pte-1-a-wrapper #when-layout-4 {
+.pte-1-b-wrapper #when-layout-4 {
+	position: absolute;
+	left: 10px;
+	top: 24%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	width: -moz-fit-content;
+	width: fit-content;
+	height: 60%;
+}
+
+.pte-1-b-wrapper #when-layout-5 {
 	position: absolute;
 	right: 10px;
-	top: 12%;
-	bottom: 10%;
+	top: 13%;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
