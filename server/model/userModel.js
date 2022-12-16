@@ -44,6 +44,26 @@ const schema = mongoose.Schema(
 			trim: true
 		},
 
+		exam_date: {
+			day: {
+				type: Number,
+				trim: true,
+				default: ""
+			},
+
+			month: {
+				type: Number,
+				trim: true,
+				default: ""
+			},
+
+			year: {
+				type: Number,
+				trim: true,
+				default: ""
+			}
+		},
+
 		username: {
 			type: String,
 			trim: true

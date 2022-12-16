@@ -34,7 +34,8 @@ user.post("/submit", async (req, res) => {
 			newDate,
 			getId,
 			frow_where,
-			getDay
+			getDay,
+			selectedDay
 		} = req.body;
 
 		// for (let index = 1; index <= 109; index++) {
@@ -71,6 +72,11 @@ user.post("/submit", async (req, res) => {
 					days_left: newDate,
 					frow_where,
 					date: new Date().toISOString().slice(0, 10),
+					exam_date: {
+						day: selectedDay.day,
+						month: selectedDay.month,
+						year: selectedDay.year
+					},
 					username,
 					password
 				}
@@ -116,7 +122,10 @@ user.post("/submit/with-img", upload.single("image"), async (req, res) => {
 			newDate,
 			getId,
 			frow_where,
-			getDay
+			getDay,
+			day,
+			month,
+			year
 		} = req.body;
 
 		// for creating user-name
@@ -140,6 +149,11 @@ user.post("/submit/with-img", upload.single("image"), async (req, res) => {
 					frow_where,
 					profile_img: req.file.filename,
 					date: new Date().toISOString().slice(0, 10),
+					exam_date: {
+						day,
+						month,
+						year
+					},
 					username,
 					password
 				}

@@ -1,4 +1,8 @@
 // external components
+import DatePicker, {
+	utils
+} from "@amir04lm26/react-modern-calendar-date-picker";
+import "@amir04lm26/react-modern-calendar-date-picker/lib/DatePicker.css";
 import { useEffect, useRef, useState } from "react";
 import { toast } from "react-toastify";
 
@@ -67,6 +71,27 @@ const BookingPopUp = ({
 			: ""
 	);
 
+	// selectedDay format start
+	// pick booking date
+	const [selectedDay, setSelectedDay] = useState(null);
+
+	const formatDate = () => {
+		if (selectedDay) {
+			return `${
+				selectedDay.day.toString().length > 1
+					? selectedDay.day
+					: "0" + selectedDay.day
+			}-${
+				selectedDay.month.toString().length > 1
+					? selectedDay.month
+					: "0" + selectedDay.month
+			}-${selectedDay.year}`;
+		} else {
+			return "";
+		}
+	};
+	// selectedDay format end
+
 	// for getting img
 	const [getImage, setImage] = useState("");
 	const [getPreview, setPreview] = useState("");
@@ -97,7 +122,8 @@ const BookingPopUp = ({
 					newDate,
 					getId: getBooked ? getBooked._id : getId,
 					frow_where,
-					getDay
+					getDay,
+					selectedDay
 				};
 
 				const response = await fetch("/user/submit", {
@@ -125,6 +151,7 @@ const BookingPopUp = ({
 					setUpdateReport(Date.now());
 					setIsLoading(false);
 					setBooked("");
+					setSelectedDay("");
 				} else if (response.status === 400) {
 					toast(result.error, {
 						position: "top-right",
@@ -184,6 +211,9 @@ const BookingPopUp = ({
 				formData.append("getId", getBooked ? getBooked._id : getId);
 				formData.append("frow_where", frow_where);
 				formData.append("getDay", getDay);
+				formData.append("day", selectedDay.day);
+				formData.append("month", selectedDay.month);
+				formData.append("year", selectedDay.year);
 
 				const response = await fetch("/user/submit/with-img", {
 					method: "POST",
@@ -209,6 +239,7 @@ const BookingPopUp = ({
 					setUpdateReport(Date.now());
 					setIsLoading(false);
 					setBooked("");
+					setSelectedDay("");
 				} else if (response.status === 400) {
 					toast(result.error, {
 						position: "top-right",
@@ -359,56 +390,36 @@ const BookingPopUp = ({
 								)}
 							</div>
 
-							{/* <div className="input-field">
+							<div className="input-field">
 								{!editT && getBooked ? (
 									<div className="displaying">
-										<h6>Exam Date : </h6> <p>{getBooked?.exam_date}</p>
+										<h6>Exam Date : </h6>{" "}
+										<p>
+											{getBooked?.exam_date?.day
+												? `${
+														getBooked.exam_date.day.toString().length > 1
+															? getBooked.exam_date.day
+															: "0" + getBooked.exam_date.day
+												  }-${
+														getBooked.exam_date.month.toString().length > 1
+															? getBooked.exam_date.month
+															: "0" + getBooked.exam_date.month
+												  }-${getBooked.exam_date.year}`
+												: "Null"}
+										</p>
 									</div>
 								) : (
-									<input
-										type="date"
-										placeholder="Exam date . . ."
-										required
-										// onChange={(e) => setExamD(e.target.value)}
-										// value={examD}
+									<DatePicker
+										value={selectedDay}
+										onChange={setSelectedDay}
+										inputPlaceholder="Pick a date . . ."
+										calendarClassName="responsive-calendar"
+										minimumDate={utils().getToday()}
+										inputClassName="calendar"
+										formatInputText={formatDate}
 									/>
 								)}
-							</div> */}
-
-							{/* <div className="exam-fields">
-								<div className="input-field">
-									{!editT && getBooked ? (
-										<div className="displaying">
-											<h6>Exam User : </h6> <p>{getBooked?.exam_user}</p>
-										</div>
-									) : (
-										<input
-											type="text"
-											placeholder="Exam user . . ."
-											required
-											// onChange={(e) => setExamU(e.target.value)}
-											// value={examU}
-										/>
-									)}
-								</div>
-
-								<div className="input-field">
-									{!editT && getBooked ? (
-										<div className="displaying">
-											<h6>Exam Password : </h6>{" "}
-											<p>{getBooked?.exam_password}</p>
-										</div>
-									) : (
-										<input
-											type="password"
-											placeholder="Exam password . . ."
-											required
-											// onChange={(e) => setExamP(e.target.value)}
-											// value={examP}
-										/>
-									)}
-								</div>
-							</div> */}
+							</div>
 
 							{(!getBooked || editT) && (
 								<div className="upload" id={getPreview ? "preview" : ""}>

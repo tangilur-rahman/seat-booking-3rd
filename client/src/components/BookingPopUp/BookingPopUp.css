@@ -98,7 +98,6 @@
 	font-size: 20px;
 	color: #5e548e;
 }
-
 /* edit icon style end */
 
 .booking-popup-wrapper .input-fields-wrapper {
@@ -165,7 +164,7 @@
 }
 
 .input-fields-container .input-field input {
-	width: 100%;
+	width: 100% !important;
 	border: 1px solid black;
 	outline: none;
 	padding: 10px 20px;
@@ -174,6 +173,36 @@
 	color: #6d6875;
 	font-weight: 600;
 }
+
+/* exam-date picker style start  */
+.input-fields-container .input-field .DatePicker {
+	position: relative;
+	display: inline-block;
+	z-index: 1000;
+	width: 100%;
+}
+
+.input-fields-container .input-field .calendar {
+	width: 100%;
+	border: 1px solid black;
+	outline: none;
+	padding: 10px 20px;
+	border-radius: 10px;
+	margin: 7px 0;
+	color: #6d6875;
+	font-weight: 600;
+	cursor: pointer;
+	text-align: start;
+	font-size: 15px;
+}
+
+.input-fields-container .input-field .calendar::placeholder {
+	font-weight: 600;
+	font-size: 16px;
+	text-align: start;
+	color: #6d6875;
+}
+/* exam-date picker style end*/
 
 .input-fields-container .exam-fields {
 	display: flex;
