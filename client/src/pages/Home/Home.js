@@ -5,8 +5,8 @@ import GenerateReport from "../../components/GenerateReport/GenerateReport";
 
 // internal components
 import { GetContextApi } from "../../ContextApi";
-import BoysLab from "../BoysLab/BoysLab";
 import PTELab1A from "../PTELab1A/PTELab1A";
+import PTELab2 from "../PTELab2/PTELab2";
 import "./Home.css";
 
 const Home = () => {
@@ -22,8 +22,8 @@ const Home = () => {
 	//pte-lab-1-a booking counter state
 	const [pteLab1AB, setPteLab1AB] = useState([]);
 
-	// boys-lab booking counter state
-	const [boysLabB, setBoysLabB] = useState([]);
+	// pte-lab-2 booking counter state
+	const [pteLab2B, setPteLab2B] = useState([]);
 
 	// for getting those document which are updated today start
 	const [generateT, setGenerateT] = useState("");
@@ -131,22 +131,22 @@ const Home = () => {
 							</div>
 							{/* PTE Lab 1 A  */}
 
-							{/* boys lab start  */}
+							{/* pte-lab-2 start  */}
 							<div
 								className="section"
-								onClick={() => setSelectedLab("boys-lab")}
+								onClick={() => setSelectedLab("pte-lab-2")}
 							>
 								<div id="header">
-									<h5>Boys Lab</h5>
+									<h5>PTE Lab 2</h5>
 									<div id="counter">
 										<span>
-											Total Seat : <b>109</b>{" "}
+											Total Seat : <b>70</b>{" "}
 										</span>
 										<span>
-											Booked Seat : <b>{boysLabB.length}</b>{" "}
+											Booked Seat : <b>{pteLab2B.length}</b>{" "}
 										</span>
 										<span>
-											Empty Seat : <b>{109 - boysLabB.length}</b>{" "}
+											Empty Seat : <b>{70 - pteLab2B.length}</b>{" "}
 										</span>
 									</div>
 								</div>
@@ -159,7 +159,7 @@ const Home = () => {
 									<span className="hover-link">View Seats</span>
 								</h6>
 							</div>
-							{/* boys lab end  */}
+							{/* pte-lab-2 end  */}
 						</div>
 					</div>
 
@@ -170,9 +170,9 @@ const Home = () => {
 						/>
 					)}
 
-					{selectedLab === "boys-lab" && (
-						<BoysLab
-							setBoysLabB={setBoysLabB}
+					{selectedLab === "pte-lab-2" && (
+						<PTELab2
+							setPteLab2B={setPteLab2B}
 							setSelectedLab={setSelectedLab}
 						/>
 					)}
