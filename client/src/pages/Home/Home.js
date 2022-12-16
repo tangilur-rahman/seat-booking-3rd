@@ -6,6 +6,7 @@ import GenerateReport from "../../components/GenerateReport/GenerateReport";
 // internal components
 import { GetContextApi } from "../../ContextApi";
 import PTELab1A from "../PTELab1A/PTELab1A";
+import PTELab1B from "../PTELab1B/PTELab1B";
 import PTELab2 from "../PTELab2/PTELab2";
 import "./Home.css";
 
@@ -21,6 +22,9 @@ const Home = () => {
 
 	//pte-lab-1-a booking counter state
 	const [pteLab1AB, setPteLab1AB] = useState([]);
+
+	//pte-lab-1-b booking counter state
+	const [pteLab1BB, setPteLab1BB] = useState([]);
 
 	// pte-lab-2 booking counter state
 	const [pteLab2B, setPteLab2B] = useState([]);
@@ -101,13 +105,13 @@ const Home = () => {
 						</div>
 
 						<div className="section-container">
-							{/* PTE Lab 1 A  */}
+							{/* PTE Lab 1A start */}
 							<div
 								className="section"
 								onClick={() => setSelectedLab("pte-lab-1-a")}
 							>
 								<div id="header">
-									<h5>PTE Lab 1 A</h5>
+									<h5>PTE Lab 1A</h5>
 									<div id="counter">
 										<span>
 											Total Seat : <b>70</b>{" "}
@@ -129,7 +133,37 @@ const Home = () => {
 									<span className="hover-link">View Seats</span>
 								</h6>
 							</div>
-							{/* PTE Lab 1 A  */}
+							{/* PTE Lab 1A end */}
+
+							{/* PTE Lab 1B Start */}
+							<div
+								className="section"
+								onClick={() => setSelectedLab("pte-lab-1-b")}
+							>
+								<div id="header">
+									<h5>PTE Lab 1B</h5>
+									<div id="counter">
+										<span>
+											Total Seat : <b>22</b>{" "}
+										</span>
+										<span>
+											Booked Seat : <b>{pteLab1BB.length}</b>{" "}
+										</span>
+										<span>
+											Empty Seat : <b>{22 - pteLab1BB.length}</b>{" "}
+										</span>
+									</div>
+								</div>
+
+								<div id="lab-container">
+									<img src="/assets/images/girls-lab.png" alt="lab-img" />
+								</div>
+
+								<h6 className="view-seats">
+									<span className="hover-link">View Seats</span>
+								</h6>
+							</div>
+							{/* PTE Lab 1B end  */}
 
 							{/* pte-lab-2 start  */}
 							<div
@@ -166,6 +200,13 @@ const Home = () => {
 					{selectedLab === "pte-lab-1-a" && (
 						<PTELab1A
 							setPteLab1AB={setPteLab1AB}
+							setSelectedLab={setSelectedLab}
+						/>
+					)}
+
+					{selectedLab === "pte-lab-1-b" && (
+						<PTELab1B
+							setPteLab1BB={setPteLab1BB}
 							setSelectedLab={setSelectedLab}
 						/>
 					)}
