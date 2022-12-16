@@ -79,7 +79,7 @@
 	display: inline-block;
 	width: 35px;
 	height: 35px;
-	background-color: #0ead69;
+	background-color: #636574;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -89,7 +89,7 @@
 }
 
 .pte-1-a-container .pte-1-a-wrapper span.active {
-	background-color: #d90429;
+	background-color: #0ead69;
 	color: white;
 	font-weight: 600;
 }
